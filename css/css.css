@@ -84,6 +84,9 @@ footer {
 
 /* ... (otros estilos) ... */
 
+
+
+/* Agregar transición y animación para la clase .section-white */
 .section-white {
     background-color: #ffffff;
     padding: 5em 0;
@@ -91,8 +94,20 @@ footer {
     color: #050505;
     position: relative;
     z-index: 1;
-    margin-top: 100vh; /* Ajusta el valor de margen-top según tu preferencia */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 100vh;
+    animation: slideInFromTop 3s ease-out forwards; /* 1s es la duración de la animación, ajusta según tus preferencias */
+}
+
+/* Definir la animación */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%); /* Iniciar fuera del área visible hacia arriba */
+        opacity: 0; /* Comenzar con opacidad 0 */
+    }
+    100% {
+        transform: translateY(0); /* Llegar a la posición original */
+        opacity: 1; /* Al final de la animación, opacidad completa */
+    }
 }
 
 /* ... (otros estilos) ... */
@@ -118,7 +133,6 @@ footer {
 .section-white:hover {
     background-color: #f3cae5;
     color: #000000;
-    transform: scale(1.05); /* Agranda ligeramente la sección al pasar el cursor */
 }
 
 .section-content {
@@ -133,7 +147,7 @@ footer {
 }
 
 
-
+/* Agregar transición y animación para la clase .section-colored */
 .section-colored {
     background-color: #f3cae5;
     padding: 4em 0;
@@ -142,24 +156,40 @@ footer {
     position: relative;
     z-index: 1;
     margin-top: 1vh;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Agrega transiciones para color de fondo, color del texto y transformación */
-}
-.section-colored:hover {
-    background-color: #d18bb1;
-    color: #000000;
-    transform: scale(1.05); /* Agranda ligeramente la sección al pasar el cursor */
+    
+    /* Agregar animación */
+    animation: slideInFromRight 4s ease-out forwards; /* 1s es la duración de la animación, ajusta según tus preferencias */
 }
 
+/* Definir la animación */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(-100%); /* Iniciar fuera del área visible hacia la derecha */
+        opacity: 0; /* Comenzar con opacidad 0 */
+    }
+    100% {
+        transform: translateX(0); /* Llegar a la posición original */
+        opacity: 1; /* Al final de la animación, opacidad completa */
+    }
+}
+
+/* Resto de los estilos para la sección section-colored */
 .section-content {
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Your Custom Font', Arial, sans-serif;/* Cambia 'Pacifico' por el nombre de la fuente que elijas */
+    font-family: 'Your Custom Font', Arial, sans-serif;
     line-height: 1.6;
-    text-align: left; /* Alineación del texto a la izquierda */
-    padding-left: 20px; /* Espacio en el inicio del párrafo */
-    padding-right: 20px; /* Espacio en el final del párrafo */
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 1.6em;
 }
+
+
+
+
+
+/* Agregar transición y animación para la clase .section-tercera */
 .section-tercera {
     background-color: #d18bb1;
     padding: 4em 0;
@@ -168,24 +198,41 @@ footer {
     position: relative;
     z-index: 1;
     margin-top: 0vh;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-.section-tercera:hover {
-    background-color: #f17d92;
-    color: #000000;
-    transform: scale(1.05); /* Agranda ligeramente la sección al pasar el cursor */
+    
+    /* Agregar animación */
+    animation: slideInFromLeft 5s ease-out forwards; /* 1s es la duración de la animación, ajusta según tus preferencias */
 }
 
+/* Definir la animación */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Iniciar fuera del área visible hacia la izquierda */
+        opacity: 0; /* Comenzar con opacidad 0 */
+    }
+    100% {
+        transform: translateX(0); /* Llegar a la posición original */
+        opacity: 1; /* Al final de la animación, opacidad completa */
+    }
+}
+
+/* Estilos para el contenido de la sección tercera */
 .section-terceracontent {
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Your Custom Font', Arial, sans-serif;/* Cambia 'Pacifico' por el nombre de la fuente que elijas */
+    font-family: 'Your Custom Font', Arial, sans-serif;
     line-height: 1.6;
-    text-align: left; /* Alineación del texto a la izquierda */
-    padding-left: 20px; /* Espacio en el inicio del párrafo */
-    padding-right: 20px; /* Espacio en el final del párrafo */
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 1.6em;
 }
+
+
+
+
+
+
+/* Agregar transición y animación para la clase .section-cuarta */
 .section-cuarta {
     background-color: #f17d92;
     padding: 4em 0;
@@ -194,25 +241,39 @@ footer {
     position: relative;
     z-index: 1;
     margin-top: 0vh;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-.section-cuarta:hover {
-    background-color: #e95d76;
-    color: #000000;
-    transform: scale(1.05); /* Agranda ligeramente la sección al pasar el cursor */
+    transform: translateY(-100%); /* Comienza fuera del área visible hacia arriba */
+    opacity: 0; /* Comienza con opacidad 0 */
+    animation: slideInFromTop 6s ease-out forwards; /* 1s es la duración de la animación, ajusta según tus preferencias */
 }
 
+/* Definir la animación */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%); /* Iniciar fuera del área visible hacia arriba */
+        opacity: 0; /* Comenzar con opacidad 0 */
+    }
+    100% {
+        transform: translateY(0); /* Llegar a la posición original */
+        opacity: 1; /* Al final de la animación, opacidad completa */
+    }
+}
+
+/* Resto de los estilos para la sección section-cuarta */
 .section-concuarta {
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Your Custom Font', Arial, sans-serif;/* Cambia 'Pacifico' por el nombre de la fuente que elijas */
+    font-family: 'Your Custom Font', Arial, sans-serif;
     line-height: 1.6;
-    text-align: left; /* Alineación del texto a la izquierda */
-    padding-left: 20px; /* Espacio en el inicio del párrafo */
-    padding-right: 20px; /* Espacio en el final del párrafo */
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 1.6em;
 }
-/* ... (estilos anteriores) ... */
+
+
+
+
+
 
 /* Estilos para el botón de Instagram */
 .instagram-button {
@@ -341,8 +402,17 @@ footer {
 p {
     font-size: 16px; /* Ajusta el tamaño de la letra según tus preferencias */
 }
-/* Achicar el tamaño de la letra para los elementos <h1> */
 h1 {
     font-size: 30px; /* Ajusta el tamaño de la letra según tus preferencias */
+    position: relative; /* Establecer posición relativa para crear una superposición */
+    display: inline-block; /* Asegurar que el fondo blanco solo cubra el contenido del texto */
+    padding: 0 10px; /* Añadir un poco de espacio alrededor del texto */
+    background-color: white; /* Fondo blanco para el texto */
+    z-index: 1; /* Asegurar que el texto esté sobre el fondo */
 }
+
+
+
+
+
 

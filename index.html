@@ -17,7 +17,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">BIENVENIDOS</a></li>
+                <li><a href="#">BIENVENIDOS/AS</a></li>
                 
             
             </ul>
@@ -118,7 +118,38 @@
         </div>
         <p>&copy; 2023 Contadora en Línea. Todos los derechos reservados.</p>
     </footer>
-    
+    <!-- ... (código HTML) ... -->
+
+<!-- ... (código HTML) ... -->
+
+<script>
+    const sections = document.querySelectorAll('.section-white, .section-colored, .section-tercera, .section-cuarta');
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    function showSections() {
+        sections.forEach((section) => {
+            if (isElementInViewport(section)) {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    showSections(); // Mostrar secciones iniciales cuando se carga la página
+
+    window.addEventListener('scroll', showSections);
+</script>
+</body>
+</html>
+
+
     <script src="js/script.js"></script>
 </body>
 </html>
