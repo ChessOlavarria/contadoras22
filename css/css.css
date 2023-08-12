@@ -86,12 +86,12 @@ footer {
 
 .section-white {
     background-color: #ffffff;
-    padding: 4em 0;
+    padding: 5em 0;
     text-align: center;
     color: #050505;
     position: relative;
     z-index: 1;
-    margin-top: 85vh; /* Ajusta el valor de margen-top según tu preferencia */
+    margin-top: 100vh; /* Ajusta el valor de margen-top según tu preferencia */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
@@ -106,7 +106,7 @@ footer {
     
     /* Ajusta el margen superior de .section-white para dispositivos móviles */
     .section-white {
-        margin-top: 80vh; /* Ajusta el valor según tu preferencia */
+        margin-top: 0.5vh; /* Ajusta el valor según tu preferencia */
     }
 
     /* Puedes agregar más ajustes aquí */
